@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/invoice',
+  baseURL: 'https://invoice-app-nimble.vercel.app/invoice',
 });
 
 export const saveInvoice = (invoiceData) => {

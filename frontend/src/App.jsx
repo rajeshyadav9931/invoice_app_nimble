@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     const fetchInvoice = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/invoice');
+        const response = await axios.get('https://invoice-app-nimble.vercel.app/invoice');
         setInvData(response.data);
       } catch (error) {
         console.error('Error fetching invoice data:', error);
