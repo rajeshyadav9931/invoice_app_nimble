@@ -34,6 +34,7 @@ function App() {
       try {
         const response = await axios.get('https://invoice-app-nimble.vercel.app/invoice');
         setInvData(response.data);
+        console.log(InvData.length)
       } catch (error) {
         console.error('Error fetching invoice data:', error);
       }
@@ -75,7 +76,8 @@ function App() {
           <InvoiceForm formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} />
         </div>
       </div>
-      {InvData ? <div className='flex justify-evenly p-2 bg-slate-200 w-full fixed  bottom-0 left-0 '>
+      {
+         InvData ?  <div className='flex justify-evenly p-2 bg-slate-200 w-full fixed  bottom-0 left-0 '>
         <div>
           <h1>Currency : <span className='text-green-700'>{InvData[0].currency}</span> </h1>
         </div>
@@ -103,7 +105,7 @@ function App() {
           <button className='bg-[#980DFF] text-white m-1 p-1 rounded'>Approve</button>
         </div>
 
-      </div> : null
+      </div> : <div></div>
       }
     </div>
   );
