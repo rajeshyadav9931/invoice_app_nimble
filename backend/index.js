@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB connection
-mongoose.connect(process.env.MongoURI, {
+mongoose.connect("mongodb+srv://rajeshkumaryadav9931grd:i6plmCMGbZF89r8K@cluster0.81cg2je.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
 });
 
 const db = mongoose.connection;
@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 app.use("/invoice", InvoiceRouter);
  
 
-  app.listen(process.env.PORT, async () => {
-    console.log(`Server is running at port ${process.env.PORT}`);
+  app.listen(8080, async () => {
+    console.log(`Server is running at port 8080`);
   });
 
