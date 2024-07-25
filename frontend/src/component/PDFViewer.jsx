@@ -19,7 +19,7 @@ function PDFViewer() {
     //     </div>
     // </div>
     <>
-      <iframe src={PDFfile} className="w-[50%] h-[100vh] border-none"></iframe>
+      <iframe src={PDFfile} className="w-[100%] h-[100vh] border-none"></iframe>
     </>
   )
 }
